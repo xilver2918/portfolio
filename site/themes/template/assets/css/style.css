@@ -1091,6 +1091,21 @@ ul.experience-chart h4 {
   }
 }
 
+@media (max-width: 550px) {
+  #about h2,
+  #portfolio h2,
+  .animated-text .cd-words-wrapper b {
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .animated-text .cd-words-wrapper,
+  .animated-text .cd-words-wrapper b {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 550px) and (min-height: 501px) {
   .introduction {
     font-size: 30px;
