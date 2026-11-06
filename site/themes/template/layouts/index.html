@@ -17,8 +17,8 @@
         "
       >
         <div class="text-holder">
-          <h1>{{ .title | safeHTML }}</h1>
-          <p>{{ .content | markdownify | emojify }}</p>
+          <h2>{{ .title | safeHTML }}</h2>
+          <div>{{ .content | $.RenderString (dict "display" "block") | emojify }}</div>
           {{ if .button.enable }} {{ with .button }}
           <a
             href="{{ .link | relURL }}"

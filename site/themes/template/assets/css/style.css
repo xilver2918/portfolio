@@ -789,7 +789,7 @@ input:checked + label span:last-child {
   padding: 70px 0px;
 }
 
-.about-me-text h1 {
+.about-me-text h2 {
   position: relative;
   color: #6f6f6f;
   font-weight: 700;
