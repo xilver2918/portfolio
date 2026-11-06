@@ -49,8 +49,8 @@
             <ul class="mobile-menu-icons list-inline mx-auto">
               {{ range .Site.Params.social }}
               <li>
-                <a href="{{ .link | safeURL }}"
-                  ><i class="fab {{ .icon }} fa-2x"></i
+                <a href="{{ .link | safeURL }}" aria-label="{{ .label | default .link }}"
+                  ><i class="fab {{ .icon }} fa-2x" aria-hidden="true"></i
                 ></a>
               </li>
               {{ end }}

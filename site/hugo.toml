@@ -70,6 +70,7 @@ preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 [[params.social]]
 icon = "fab fa-github"
 link = "https://github.com/xilver2918"
+label = "GitHub 프로필"
 
 contentDir = "content/english"
 weight = 1
