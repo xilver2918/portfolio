@@ -1,29 +1,27 @@
 ########################## hero area ##########################
 hero:
-  title: "I'm Burton Guster"
+  title: '안녕하세요, 은철입니다'
 
   # animated text loop
   occupations:
-    - 'Web Developer'
-    - 'Pharmaceutical Salesman'
-    - 'Private Detective'
+    - '컴퓨터공학부 3학년'
+    - '클라우드 인프라에 관심이 있습니다'
 
   # hero background image
   bg_image: 'images/background.jpg'
-  # optional mobile breakpoint background
-  mobile_bg_image: 'images/gus_small.jpg'
 
 ########################### About ##################################
 about:
   enable: true
   image: 'images/profile.jpg'
-  title: 'THIS IS ME'
-  content: Hi, thank you for taking a look around my site. If you have any questions feel free to reach out on [LinkedIn, Github, or by email](#contact)!
+  title: '자기소개'
+  content: >-
+    컴퓨터공학부 3학년 은철입니다. 인프라와 클라우드에 관심이 있으며,
+    클라우드 환경에서 동작하는 서비스 프로젝트를 해보고 싶습니다.
+    중도입국 학생을 위한 교육 지원 프로그램 추천 앱 팀 프로젝트에서는
+    프런트엔드와 백엔드 개발을 맡았습니다.
   button:
-    enable: true
-    label: 'DOWNLOAD MY RESUME'
-    link: #
-    icon: 'fa-download'
+    enable: false
 
 ###########################3 Experience ##############################
 experience:
