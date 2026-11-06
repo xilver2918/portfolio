@@ -1057,7 +1057,10 @@ ul.experience-chart h4 {
 
 @media (max-width: 550px) and (min-height: 501px) {
   .introduction {
-    font-size: 45px;
+    font-size: 30px;
+    line-height: 1.25;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
     margin-bottom: 5px;
   }
   .animated-text {
