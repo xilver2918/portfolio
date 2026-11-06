@@ -115,7 +115,7 @@
       </div>
       <ul id="og-grid" class="og-grid">
         {{ range .portfolio_list }} {{ $image := resources.Get .image }} {{
-        $big_image := $image.Fill "780x500 jpg" }} {{ $sm_image := $image.Fill
+        $big_image := $image.Fit "780x500 jpg" }} {{ $sm_image := $image.Fill
         "395x250 jpg" }} {{ $parsed_name := replace .name "." "" }}
         <li>
           <div class="project-description" hidden>
