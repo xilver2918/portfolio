@@ -137,8 +137,17 @@
 	text-align: center;
 }
 
+@font-face {
+	font-family: 'Paperlogy';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy-5Medium.woff2') format('woff2');
+}
+
 .og-details h3 {
-	font-weight: 400;
+	font-family: 'Paperlogy', 'Malgun Gothic', sans-serif;
+	font-weight: 500;
 	font-size: clamp(1.5rem, 3vw, 2rem);
 	word-break: keep-all;
 	overflow-wrap: anywhere;
