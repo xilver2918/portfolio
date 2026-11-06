@@ -8,7 +8,7 @@ hero:
     - '클라우드 인프라에 관심이 있습니다'
 
   # hero background image
-  bg_image: 'images/background.jpg'
+  bg_image: 'images/hero-city.png'
 
 ########################### About ##################################
 about:
