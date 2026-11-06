@@ -203,6 +203,17 @@
     setMobileMenu(this.getAttribute('aria-expanded') !== 'true');
   });
 
+  $(document).on('keydown', function (event) {
+    if (event.key !== 'Escape' || event.isDefaultPrevented()) return;
+
+    var toggle = document.querySelector('.mobile-menu .menu-link[aria-expanded="true"]');
+    if (!toggle || !toggle.getClientRects().length) return;
+
+    event.preventDefault();
+    setMobileMenu(false);
+    toggle.focus();
+  });
+
   $('.mobile-menu-list a').on('click', function () {
     setMobileMenu(false);
   });
