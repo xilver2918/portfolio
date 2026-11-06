@@ -88,7 +88,8 @@ portfolio:
   portfolio_list:
     - name: '이:음 · 중도입국 학생을 위한 다국어 문의기관 안내'
       image: 'images/portfolio/ieum-demo.png'
-      url: 'https://github.com/xilver2918/education-data'
+      thumbnail: 'images/portfolio/ieum-cover.png'
+      url: 'https://education-data.vercel.app/'
       description: |
         **2026년 3월 · AI 활용 공모전 팀 프로젝트 · 완료**
 

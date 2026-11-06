@@ -114,9 +114,14 @@
         <h2>{{ .title }}</h2>
       </div>
       <ul id="og-grid" class="og-grid">
-        {{ range .portfolio_list }} {{ $image := resources.Get .image }} {{
-        $big_image := $image.Fit "780x500 jpg" }} {{ $sm_image := $image.Fill
-        "395x250 jpg" }} {{ $parsed_name := replace .name "." "" }}
+        {{ range .portfolio_list }}
+        {{ $image := resources.Get .image }}
+        {{ $big_image := $image }}
+        {{ $sm_image := $image.Fill "395x250 jpg" }}
+        {{ with .thumbnail }}
+          {{ $sm_image = resources.Get . }}
+        {{ end }}
+        {{ $parsed_name := replace .name "." "" }}
         <li>
           <div class="project-description" hidden>
             {{ .description | markdownify }}
