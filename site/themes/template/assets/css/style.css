@@ -1414,6 +1414,50 @@ ul.experience-chart h4 {
   }
 }
 
+@media (max-width: 575px) {
+  .row.about-me-holder {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 12px;
+    margin-inline: 0;
+    margin-bottom: 30px;
+  }
+
+  .about-me-holder .about-me-text {
+    display: contents !important;
+  }
+
+  .about-me-holder .text-holder {
+    display: contents;
+  }
+
+  .about-me-text h2 {
+    grid-area: 1 / 1;
+    margin-bottom: 0;
+  }
+
+  .about-me-holder .about-me-images {
+    grid-area: 1 / 2;
+    width: min(200px, 52vw);
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about-me-images img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .about-me-holder .text-holder > :not(h2) {
+    grid-column: 1 / -1;
+  }
+
+  .about-me-holder .download-cv {
+    justify-self: start;
+  }
+}
+
 @media (min-width: 601px) and (max-width: 991px) {
   .menu-container {
     justify-content: flex-start;
