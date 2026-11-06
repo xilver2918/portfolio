@@ -815,7 +815,8 @@ input:checked + label span:last-child {
   padding: 70px 0px;
 }
 
-.about-me-text h2 {
+.about-me-text h2,
+#portfolio .portfolio-holder > .col-12 > h2 {
   position: relative;
   color: #6f6f6f;
   font-weight: 700;
@@ -1152,6 +1153,13 @@ ul.experience-chart h4 {
     overflow-wrap: anywhere;
   }
 
+}
+
+@media (max-width: 390px) {
+  .about-me-text h2,
+  #portfolio .portfolio-holder > .col-12 > h2 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 550px) and (min-height: 501px) {

@@ -220,7 +220,6 @@
 
 @media screen and (max-width: 650px) {
 
-  .portfolio h2 { font-size: 24px; }
   .og-grid li > a {
     max-width: 85vw;
     margin-inline: auto;
