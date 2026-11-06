@@ -1,4 +1,6 @@
 .og-grid {
+	--og-panel-background: #A6AFCC;
+	--og-panel-ink: #202538;
 	list-style: none;
 	padding: 20px 0;
 	margin: 0 auto;
@@ -39,7 +41,7 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #ddd;
+	border-bottom-color: var(--og-panel-background);
 	border-width: 15px;
 	left: 50%;
 	margin: -20px 0 0 -15px;
@@ -54,7 +56,8 @@
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr);
 	grid-template-columns: minmax(0, 1fr);
-	background: #ddd;
+	background: var(--og-panel-background);
+	color: var(--og-panel-ink);
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -89,7 +92,7 @@
 	left: 0;
 	top: 50%;
 	height: 3px;
-	background: #888;
+	background: var(--og-panel-ink);
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
@@ -162,7 +165,7 @@
 	line-height: 1.55;
 	word-break: keep-all;
 	overflow-wrap: anywhere;
-	color: #4d4d4d;
+	color: var(--og-panel-ink);
 }
 
 .og-loading {
