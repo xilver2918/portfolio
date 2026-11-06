@@ -1419,6 +1419,16 @@ ul.experience-chart h4 {
   .desktop-menu-logo {
     display: none;
   }
+  .menu-container:not(.menu-normal) {
+    background: transparent;
+  }
+  .menu-container:not(.menu-normal) .mobile-menu {
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-container:not(.menu-normal) .mobile-menu-nav span {
+    background: #fff;
+  }
   .menu-container-transparent {
     background: rgb(255, 255, 255);
   }
