@@ -310,7 +310,14 @@ var Grid = (function () {
           buttontext: $itemEl.data('buttontext')
         };
 
-      this.$title.text(eldata.title);
+      var titleParts = String(eldata.title).split(' · ');
+      this.$title.empty().text(titleParts.shift());
+      if (titleParts.length) {
+        this.$title.append(
+          $('<span class="og-title-separator"></span>').text(' · '),
+          $('<span class="og-title-subtitle"></span>').text(titleParts.join(' · '))
+        );
+      }
       this.$description.html(eldata.description);
       if (eldata.buttontext) this.$href.text(eldata.buttontext);
       else this.$href.text('{{ .Site.Params.buttontext }}');
