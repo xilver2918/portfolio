@@ -168,9 +168,8 @@
         // Toggling Mobile Menu Visibility
         $('.mobile-menu').toggleClass('mobile-menu-fix');
         // Auto-Collapsing Mobile Menu When Left Open
-        var a = $('.menu-link').attr('class');
-        if (direction == 'up' && a == 'menu-link active') {
-          $('.menu-link').trigger('click');
+        if (direction === 'up') {
+          setMobileMenu(false);
         }
       },
       // make header turn white just before it reaches about me section
@@ -188,14 +187,24 @@
   }
 
   // Toggle Mobile Menu
-  $('.mobile-menu a.menu-link').on('click', function () {
-    $('.menu-link').toggleClass('active');
-    $('.menu-slider').stop(true, true).slideToggle(500);
+  function setMobileMenu(isOpen) {
+    $('.mobile-menu .menu-link')
+      .toggleClass('active', isOpen)
+      .attr('aria-expanded', String(isOpen));
+    var $panel = $('#mobile-menu-panel').stop(true, true);
+    if (isOpen) {
+      $panel.slideDown(500);
+    } else {
+      $panel.slideUp(500);
+    }
+  }
+
+  $('.mobile-menu .menu-link').on('click', function () {
+    setMobileMenu(this.getAttribute('aria-expanded') !== 'true');
   });
 
   $('.mobile-menu-list a').on('click', function () {
-    $('.mobile-menu .menu-link').removeClass('active');
-    $('.mobile-menu .menu-slider').stop(true, true).slideUp(500);
+    setMobileMenu(false);
   });
   /*--------------------------------
 			 End Menu
