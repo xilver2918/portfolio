@@ -197,7 +197,9 @@
   }
 
   .og-fullimg img {
-    max-height: 220px;
+    width: min(90vw, 100%);
+    height: auto;
+    max-height: none;
     margin-bottom: 16px;
   }
 }

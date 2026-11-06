@@ -1091,7 +1091,7 @@ ul.experience-chart h4 {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 900px) {
   .hero-static-line {
     display: block;
   }
@@ -1099,7 +1099,9 @@ ul.experience-chart h4 {
   .hero-static-separator {
     display: none;
   }
+}
 
+@media (max-width: 550px) {
   #about h2,
   #portfolio h2,
   .animated-text .cd-words-wrapper b {
