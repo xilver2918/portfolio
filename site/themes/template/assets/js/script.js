@@ -54,6 +54,7 @@
   function smoothScroll() {
     // Select all links with hashes
     $('a[href*="#"]')
+      .not('.desktop-menu a, .mobile-menu-list a')
       // Remove links that don't actually link to anything
       .not('[href="#"]')
       .not('[href="#0"]')
