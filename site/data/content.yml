@@ -82,18 +82,15 @@ funfacts:
 ############################# portfolio ################################
 portfolio:
   enable: true
-  title: 'MY WORK'
+  title: '대표 활동'
   portfolio_list:
-    - name: Hugo
-      image: 'images/portfolio/hugo.png'
-      url: https://gohugo.io
-      description: Commodo non mollit commodo esse. Quis ad Lorem eiusmod ad velit Lorem sint elit. Anim magna duis et duis pariatur eiusmod laboris esse. Sit duis labore sit esse enim laborum nisi sunt magna sint labore tempor. Sit sit sint eu laboris officia et sunt consequat sit excepteur nostrud eu. Fugiat aliqua id et pariatur quis commodo aute aliqua et magna officia eu cillum mollit. Sint culpa excepteur culpa culpa sint est eu dolore culpa duis adipisicing proident.
-
-    - name: Hugo Themes
-      image: 'images/portfolio/hugothemes.png'
-      url: https://gohugo.io
-      description: Commodo non mollit commodo esse. Quis ad Lorem eiusmod ad velit Lorem sint elit. Anim magna duis et duis pariatur eiusmod laboris esse. Sit duis labore sit esse enim laborum nisi sunt magna sint labore tempor. Sit sit sint eu laboris officia et sunt consequat sit excepteur nostrud eu. Fugiat aliqua id et pariatur quis commodo aute aliqua et magna officia eu cillum mollit. Sint culpa excepteur culpa culpa sint est eu dolore culpa duis adipisicing proident.
-
-    - name: Just A Design
+    - name: '중도입국 학생을 위한 교육 지원 프로그램 추천 앱'
       image: 'images/portfolio/design.png'
-      description: Commodo non mollit commodo esse. Quis ad Lorem eiusmod ad velit Lorem sint elit. Anim magna duis et duis pariatur eiusmod laboris esse. Sit duis labore sit esse enim laborum nisi sunt magna sint labore tempor. Sit sit sint eu laboris officia et sunt consequat sit excepteur nostrud eu. Fugiat aliqua id et pariatur quis commodo aute aliqua et magna officia eu cillum mollit. Sint culpa excepteur culpa culpa sint est eu dolore culpa duis adipisicing proident.
+      description: |
+        **2026년 3월 · 팀 프로젝트 · 완료**
+
+        중도입국 학생이 여러 곳에 흩어진 교육 지원 정보를 한곳에서 찾을 수 있도록 앱 프로토타입을 만들었습니다.
+
+        **핵심 기능** — 학생이 사용하는 언어에 따라 국내 교육 지원 프로그램을 추천합니다.
+
+        **담당 역할** — 팀에서 풀스택 개발을 맡아 프런트엔드와 백엔드를 구현했습니다.
