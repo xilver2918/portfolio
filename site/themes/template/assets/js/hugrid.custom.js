@@ -177,7 +177,7 @@ var Grid = (function () {
       var $item = $(this);
       $item.data('offsetTop', $item.offset().top);
       if (saveheight) {
-        $item.data('height', $item.height());
+        $item.data('height', $item.children('a').outerHeight());
       }
     });
   }
@@ -188,7 +188,7 @@ var Grid = (function () {
     $window.on('debouncedresize', function () {
       scrollExtra = 0;
       previewPos = -1;
-      saveItemInfo();
+      saveItemInfo(true);
       getWinSize();
       var preview = $.data(this, 'preview');
       if (typeof preview != 'undefined') {
@@ -362,7 +362,7 @@ var Grid = (function () {
           if (support) {
             $(this).off(transEndEventName);
           }
-          self.$item.removeClass('og-expanded');
+          self.$item.removeClass('og-expanded').css('height', '');
           self.$previewEl.remove();
         };
 
