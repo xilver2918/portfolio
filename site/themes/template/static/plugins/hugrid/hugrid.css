@@ -162,7 +162,19 @@
 
 @media screen and (max-width: 650px) {
 
+  .portfolio h2 { font-size: 24px; }
+  .og-grid li > a {
+    max-width: 85vw;
+    margin-inline: auto;
+  }
 	.og-fullimg { display: none; }
   .og-details { float: none; width: 100%; padding: 0; }
+  .og-details h3 { font-size: 18px; }
+  .og-details p {
+    font-size: 14px;
+    line-height: 1.55;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 
 }
