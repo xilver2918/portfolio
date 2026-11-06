@@ -262,6 +262,22 @@ body {
   overflow-wrap: anywhere;
 }
 
+.hero-static-text {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-text .cd-headline {
+    display: none;
+  }
+
+  .animated-text .hero-static-text {
+    display: inline;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+}
+
 .typist-blink:after {
   content: ' ';
   display: inline-block;

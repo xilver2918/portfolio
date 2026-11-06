@@ -37,6 +37,7 @@
                 }} {{ end }}
               </span>
             </strong>
+            <strong class="hero-static-text">{{ delimit .occupations " · " }}</strong>
           </div>
           {{ if .button.enable }} {{ with .button }}
           <a class="hireMe button" href="{{ .link }}">{{ .label }}</a>
