@@ -14,6 +14,7 @@ hero:
 about:
   enable: true
   image: 'images/profile-avatar.png'
+  image_alt: '은철을 표현한 일러스트'
   title: '자기소개'
   content: |
     컴퓨터공학부 3학년 은철입니다. 클라우드 수업에서 AWS EC2에 웹사이트를 배포하고
@@ -89,6 +90,8 @@ portfolio:
     - name: '이:음 · 중도입국 학생을 위한 다국어 문의기관 안내'
       image: 'images/portfolio/ieum-demo.png'
       thumbnail: 'images/portfolio/ieum-cover.png'
+      thumbnail_alt: '이:음 프로젝트 상세 보기'
+      image_alt: '이:음 사용자 이용 예시 화면'
       url: 'https://education-data.vercel.app/'
       description: |
         **2026년 3월 · AI 활용 공모전 팀 프로젝트 · 완료**

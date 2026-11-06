@@ -33,7 +33,7 @@
       </div>
       {{ with .image }}
       <div class="col-lg-6 col-sm-6 col-9 about-me-images">
-        <img src="{{ . | relURL }}" alt="about-me" />
+        <img src="{{ . | relURL }}" alt="{{ $.Site.Data.content.about.image_alt }}" />
       </div>
       {{ end }}
     </div>
@@ -121,7 +121,6 @@
         {{ with .thumbnail }}
           {{ $sm_image = resources.Get . }}
         {{ end }}
-        {{ $parsed_name := replace .name "." "" }}
         <li>
           <div class="project-description" hidden>
             {{ .description | markdownify }}
@@ -129,13 +128,14 @@
           <a
             href="{{ $big_image.RelPermalink }}"
             data-largesrc="{{ $big_image.RelPermalink }}"
+            data-image-alt="{{ .image_alt | default .name }}"
             data-title="{{ .name }}"
             {{ with .url }}data-project-url="{{ . }}"{{ end }}
             data-buttontext="결과물 보기"
           >
             <img
               src="{{ $sm_image.RelPermalink }}"
-              alt="{{ $parsed_name }} image"
+              alt="{{ .thumbnail_alt | default .name }}"
             />
           </a>
         </li>

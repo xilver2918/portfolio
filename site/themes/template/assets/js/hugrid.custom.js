@@ -304,6 +304,7 @@ var Grid = (function () {
         eldata = {
           href: $itemEl.attr('data-project-url'),
           largesrc: $itemEl.data('largesrc'),
+          imageAlt: $itemEl.attr('data-image-alt'),
           title: $itemEl.data('title'),
           description: this.$item.children('.project-description').html(),
           buttontext: $itemEl.data('buttontext')
@@ -331,6 +332,7 @@ var Grid = (function () {
       if (self.$fullimage.is(':visible')) {
         this.$loading.show();
         $('<img/>')
+          .attr('alt', eldata.imageAlt)
           .on('load', function () {
             var $img = $(this);
             if (
