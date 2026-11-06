@@ -51,6 +51,7 @@ weight = 3
 
 #################### default parameters ################################
 [params]
+contact_email = "xilver2918@jbnu.ac.kr"
 copyright = "&copy; 은철"
 # Meta data
 description = "컴퓨터공학부 은철의 자기소개와 프로젝트를 담은 포트폴리오"

@@ -7,6 +7,13 @@
         ></a>
       </li>
     {{ end }}
+    {{ with $.Site.Params.contact_email }}
+      <li>
+        <a class="footer-email" href="{{ printf "mailto:%s" . | safeURL }}" aria-label="은철에게 이메일 보내기">
+          <img src="{{ "images/email-icon.png" | relURL }}" alt="" />
+        </a>
+      </li>
+    {{ end }}
   </ul>
   <div class="credit">
     {{ $.Site.Params.copyright | markdownify }}

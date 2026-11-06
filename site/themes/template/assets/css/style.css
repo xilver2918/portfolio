@@ -1044,6 +1044,20 @@ ul.experience-chart h4 {
   display: inline-block;
 }
 
+.footer-email {
+  display: grid;
+  place-content: center;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+}
+
+.footer-email img {
+  display: block;
+  width: 110px;
+  height: auto;
+}
+
 .footer-icons a,
 .to-top a {
   text-decoration: none;
