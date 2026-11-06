@@ -56,7 +56,6 @@ copyright = "&copy; 은철"
 description = "컴퓨터공학부 은철의 자기소개와 프로젝트를 담은 포트폴리오"
 author = "은철"
 favicon = "images/favicon.png"
-google_analytics = "G-ABCDEFG123"
 logo_light = "images/cloud-logo.png"
 logo_dark = "images/cloud-logo.png"
 

@@ -37,7 +37,11 @@
                 }} {{ end }}
               </span>
             </strong>
-            <strong class="hero-static-text">{{ delimit .occupations " · " }}</strong>
+            <strong class="hero-static-text">
+              {{ range $index, $occupation := .occupations }}
+                {{ if $index }}<span class="hero-static-separator"> · </span>{{ end }}<span class="hero-static-line">{{ $occupation }}</span>
+              {{ end }}
+            </strong>
           </div>
           {{ if .button.enable }} {{ with .button }}
           <a class="hireMe button" href="{{ .link }}">{{ .label }}</a>

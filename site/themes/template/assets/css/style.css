@@ -1092,6 +1092,14 @@ ul.experience-chart h4 {
 }
 
 @media (max-width: 550px) {
+  .hero-static-line {
+    display: block;
+  }
+
+  .hero-static-separator {
+    display: none;
+  }
+
   #about h2,
   #portfolio h2,
   .animated-text .cd-words-wrapper b {
