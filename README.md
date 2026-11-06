@@ -32,6 +32,17 @@ hugo --config hugo.toml,pages.json --minify
 - 프로필과 배경 이미지는 `site/static/images/`, 대표 활동 이미지는 `site/assets/images/portfolio/`에 둡니다.
 - 로컬 확인 후 수정 파일을 커밋하고 `git push origin main`을 실행합니다. [GitHub Actions](https://github.com/xilver2918/portfolio/actions)에서 해당 커밋의 `build`와 `deploy` 성공을 확인한 뒤 공개 사이트에서 변경을 확인합니다.
 
+## 이미지와 웹폰트 출처
+
+| 자료 | 사용 위치 | 제작 및 출처 |
+| --- | --- | --- |
+| 도시 배경 이미지 | 첫 화면 · `site/static/images/hero-city.png` | 포트폴리오 작성자가 AI로 생성한 이미지 |
+| 구름 로고 | 상단 메뉴 · `site/static/images/cloud-logo.png` | 포트폴리오 작성자가 AI로 생성한 이미지 |
+| 프로필 아바타 | 자기소개 · `site/static/images/profile-avatar.png` | 포트폴리오 작성자가 AI로 생성한 원본을 이미지 편집 도구로 투명 배경 처리 |
+| 이:음 시연 화면 | 대표 활동 · `site/assets/images/portfolio/ieum-cover.png`, `ieum-demo.png` | [이:음 웹앱](https://education-data.vercel.app/)의 시연 화면 캡처 |
+| Paperlogy 5 Medium | 대표 활동 상세 제목 | [Paperlogy 제작자 페이지](https://freesentation.blog/paperlogyfont) · [웹폰트 배포처](https://github.com/fonts-archive/Paperlogy) |
+| Port Hugo | 사이트 테마 | [테마 원본](https://github.com/tylersayshi/port-hugo) · [MIT 라이선스](LICENSE) |
+
 ## Port Hugo 원본 안내
 
 currently tested with hugo v0.141.0
