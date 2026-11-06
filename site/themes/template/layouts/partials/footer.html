@@ -16,7 +16,9 @@
     {{ end }}
   </ul>
   <div class="credit">
-    {{ $.Site.Params.copyright | markdownify }}
-    <span id="current-year"></span>
+    <span>{{ $.Site.Params.copyright | markdownify }} <span id="current-year"></span></span>
+    {{ with $.Site.Params.contact_email }}
+      <span class="footer-email-address">{{ . }}</span>
+    {{ end }}
   </div>
 </div>

@@ -1020,7 +1020,7 @@ ul.experience-chart h4 {
 ----------------------------------*/
 .footer {
   padding-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 24px;
   position: relative;
   z-index: 2;
 }
@@ -1065,6 +1065,11 @@ ul.experience-chart h4 {
   height: auto;
 }
 
+.footer-email-address {
+  color: #313131;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 390px) {
   .footer-icons .footer-icon {
     font-size: 30.8px;
@@ -1103,12 +1108,19 @@ ul.experience-chart h4 {
   transform: translateY(-5px);
 }
 
-.credit {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  right: 0;
-  text-align: center;
+.footer .credit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
+  margin-top: 8px;
+}
+
+@media (max-width: 390px) {
+  .footer .credit {
+    flex-direction: column;
+    font-size: 70%;
+  }
 }
 
 /*--------------------------------
