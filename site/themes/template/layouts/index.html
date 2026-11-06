@@ -17,7 +17,7 @@
         "
       >
         <div class="text-holder">
-          <h2>{{ .title | safeHTML }}</h2>
+          <h2 id="about-heading" tabindex="0">{{ .title | safeHTML }}</h2>
           <div>{{ .content | $.RenderString (dict "display" "block") | emojify }}</div>
           {{ if .button.enable }} {{ with .button }}
           <a
@@ -111,7 +111,7 @@
   <div class="container-fluid text-center">
     <div class="row portfolio-holder text-left">
       <div class="col-12 text-center">
-        <h2>{{ .title }}</h2>
+        <h2 id="portfolio-heading" tabindex="0">{{ .title }}</h2>
       </div>
       <ul id="og-grid" class="og-grid">
         {{ range .portfolio_list }}

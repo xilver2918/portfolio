@@ -203,6 +203,18 @@
   $('.mobile-menu-list a').on('click', function () {
     setMobileMenu(false);
   });
+
+  $('.desktop-menu a[href="#about"], .mobile-menu-list a[href="#about"]').on('click', function (event) {
+    if (event.originalEvent?.detail !== 0 || event.isDefaultPrevented() ||
+        event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+    var heading = document.getElementById('about-heading');
+    if (heading) {
+      requestAnimationFrame(function () {
+        heading.focus({ preventScroll: true });
+      });
+    }
+  });
   /*--------------------------------
 			 End Menu
 	----------------------------------*/
