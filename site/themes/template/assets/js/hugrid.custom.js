@@ -265,8 +265,7 @@ var Grid = (function () {
       );
       this.$details = $('<div class="og-details"></div>').append(
         this.$title,
-        this.$description,
-        this.$href
+        this.$description
       );
       this.$loading = $('<div class="og-loading"></div>');
       this.$fullimage = $('<div class="og-fullimg"></div>').append(
@@ -276,7 +275,8 @@ var Grid = (function () {
       this.$previewInner = $('<div class="og-expander-inner"></div>').append(
         this.$closePreview,
         this.$fullimage,
-        this.$details
+        this.$details,
+        $('<div class="og-actions"></div>').append(this.$href)
       );
       this.$previewEl = $('<div class="og-expander"></div>').append(
         this.$previewInner

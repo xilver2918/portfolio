@@ -35,6 +35,10 @@
 	margin: -20px 0 0 -15px;
 }
 
+.og-grid:has(.og-expanded) {
+	padding-bottom: 48px;
+}
+
 .og-expander {
 	position: absolute;
 	background: #ddd;
@@ -107,12 +111,18 @@
 
 .og-fullimg {
 	text-align: center;
+	height: auto;
 }
 
 .og-fullimg img {
 	display: inline-block;
-	max-height: 100%;
+	max-height: min(55vh, 520px);
 	max-width: 100%;
+}
+
+.og-actions {
+	clear: both;
+	text-align: center;
 }
 
 .og-details h3 {
