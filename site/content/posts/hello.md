@@ -1,6 +1,6 @@
 ---
 title: Hello
 date: 2026-01-01
-draft: false
+draft: true
 ---
 This is my first post.
