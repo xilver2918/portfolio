@@ -273,12 +273,12 @@ var Grid = (function () {
       );
       this.$closePreview = $('<button type="button" class="og-close" aria-label="상세 닫기"></button>');
       this.$previewInner = $('<div class="og-expander-inner"></div>').append(
-        this.$closePreview,
         this.$fullimage,
         this.$details,
         $('<div class="og-actions"></div>').append(this.$href)
       );
       this.$previewEl = $('<div class="og-expander"></div>').append(
+        this.$closePreview,
         this.$previewInner
       );
       this.$item.append(this.getEl());
