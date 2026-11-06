@@ -57,8 +57,8 @@ copyright = "&copy; 은철"
 description = "컴퓨터공학부 은철의 자기소개와 프로젝트를 담은 포트폴리오"
 author = "은철"
 favicon = "images/favicon.png"
-logo_light = "images/cloud-logo.png"
-logo_dark = "images/cloud-logo.png"
+logo_light = "images/cloud-logo-transparent.png"
+logo_dark = "images/cloud-logo-transparent.png"
 
 # Preloader
 [params.preloader]
