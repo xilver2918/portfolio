@@ -118,14 +118,15 @@
         $big_image := $image.Fill "780x500 jpg" }} {{ $sm_image := $image.Fill
         "395x250 jpg" }} {{ $parsed_name := replace .name "." "" }}
         <li>
-          <p id="description-{{ $parsed_name | urlize }}" class="hidden">
+          <div class="project-description" hidden>
             {{ .description | markdownify }}
-          </p>
+          </div>
           <a
-            href="{{ .url }}"
+            href="{{ $big_image.RelPermalink }}"
             data-largesrc="{{ $big_image.RelPermalink }}"
             data-title="{{ .name }}"
-            data-buttontext="SEE SITE"
+            {{ with .url }}data-project-url="{{ . }}"{{ end }}
+            data-buttontext="결과물 보기"
           >
             <img
               src="{{ $sm_image.RelPermalink }}"

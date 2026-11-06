@@ -110,7 +110,9 @@
 
 .og-details h3 {
 	font-weight: 400;
-	font-size: 52px;
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	word-break: keep-all;
+	overflow-wrap: anywhere;
   margin-bottom: 10px;
 }
 
@@ -158,6 +160,5 @@
 
 	.og-fullimg { display: none; }
   .og-details { float: none; width: 100%; padding: 0; }
-  .og-details h3 { font-size: 32px; }
 
 }

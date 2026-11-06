@@ -257,7 +257,7 @@ var Grid = (function () {
   Preview.prototype = {
     create: function () {
       this.$title = $('<h3></h3>');
-      this.$description = $('<p></p>');
+      this.$description = $('<div></div>');
       this.$href = $(
         '<a href="#" class="button" target="_blank" rel="noreferrer">{{ .Site.Params.buttontext }}</a>'
       );
@@ -298,30 +298,16 @@ var Grid = (function () {
 
       current = this.$item.index();
 
-      function formatForUrl(str) {
-        return str
-          .replace(/_/g, '-')
-          .replace(/ /g, '-')
-          .replace(/:/g, '-')
-          .replace(/\\/g, '-')
-          .replace(/\//g, '-')
-          .replace(/[^a-zA-Z0-9\-]+/g, '')
-          .replace(/-{2,}/g, '-')
-          .toLowerCase();
-      }
-
       var $itemEl = this.$item.children('a'),
         eldata = {
-          href: $itemEl.attr('href'),
+          href: $itemEl.attr('data-project-url'),
           largesrc: $itemEl.data('largesrc'),
           title: $itemEl.data('title'),
-          description: $(
-            `#description-${formatForUrl($itemEl.data('title'))}`
-          ).html(),
+          description: this.$item.children('.project-description').html(),
           buttontext: $itemEl.data('buttontext')
         };
 
-      this.$title.html(eldata.title);
+      this.$title.text(eldata.title);
       this.$description.html(eldata.description);
       if (eldata.buttontext) this.$href.text(eldata.buttontext);
       else this.$href.text('{{ .Site.Params.buttontext }}');
@@ -330,6 +316,7 @@ var Grid = (function () {
         this.$href.attr('href', eldata.href);
         this.$href.show();
       } else {
+        this.$href.removeAttr('href');
         this.$href.hide();
       }
 
