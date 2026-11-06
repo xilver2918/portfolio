@@ -16,8 +16,11 @@ h1 {
   font-size: 2rem;
 }
 
-* {
-  outline: none;
+a[href]:focus-visible,
+button:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff;
 }
 
 body {
