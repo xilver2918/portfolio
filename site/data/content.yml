@@ -13,7 +13,7 @@ hero:
 ########################### About ##################################
 about:
   enable: true
-  image: 'images/profile.jpg'
+  image: 'images/profile-avatar.png'
   title: '자기소개'
   content: |
     컴퓨터공학부 3학년 은철입니다. 클라우드 수업에서 AWS EC2에 웹사이트를 배포하고
