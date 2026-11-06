@@ -1,4 +1,38 @@
-# Port-Hugo (A simple portfolio)
+# 은철의 포트폴리오
+
+[공개 사이트](https://xilver2918.github.io/portfolio/)는 Hugo와 [Port Hugo 테마](https://github.com/tylersayshi/port-hugo)로 제작했습니다.
+
+## 로컬 실행 및 빌드
+
+Git과 Hugo extended를 설치합니다. Windows에서는 `winget install --id Hugo.Hugo.Extended -e`로 Hugo를 설치할 수 있습니다. 로컬 확인에는 Hugo extended 0.169.0을, GitHub Actions에서는 0.167.0을 사용합니다. 설치 후 `hugo version`으로 버전과 extended 여부를 확인하세요.
+
+저장소를 처음 받는 경우 아래 명령을 실행합니다.
+
+```powershell
+git clone https://github.com/xilver2918/portfolio.git
+cd portfolio/site
+```
+
+이미 저장소 루트에 있다면 `cd site`로 이동합니다. 미리보기 서버를 켠 뒤 [로컬 사이트](http://localhost:1313/portfolio/)를 엽니다. 종료하려면 `Ctrl+C`를 누릅니다.
+
+```powershell
+hugo server --config hugo.toml,pages.json --baseURL http://localhost:1313/portfolio/
+```
+
+정적 파일을 생성하려면 같은 폴더에서 아래 명령을 실행합니다. 홈 파일은 `site/public/index.html`에 생성됩니다.
+
+```powershell
+hugo --config hugo.toml,pages.json --minify
+```
+
+## 콘텐츠 수정 및 재배포
+
+- 첫 화면, 자기소개, 대표 활동은 `site/data/content.yml`에서 수정합니다.
+- 사이트 제목, 메뉴, 소셜 링크는 `site/hugo.toml`에서 수정합니다. 배포 주소와 테마 설정은 `site/pages.json`에 있습니다.
+- 프로필과 배경 이미지는 `site/static/images/`, 대표 활동 이미지는 `site/assets/images/portfolio/`에 둡니다.
+- 로컬 확인 후 수정 파일을 커밋하고 `git push origin main`을 실행합니다. [GitHub Actions](https://github.com/xilver2918/portfolio/actions)에서 해당 커밋의 `build`와 `deploy` 성공을 확인한 뒤 공개 사이트에서 변경을 확인합니다.
+
+## Port Hugo 원본 안내
 
 currently tested with hugo v0.141.0
 
