@@ -49,7 +49,8 @@
 
 .og-expander-inner {
 	padding: 50px 30px;
-	min-height: 100%;
+	height: 100%;
+	overflow-y: auto;
 }
 
 .og-close {
@@ -100,6 +101,8 @@
 
 .og-details {
 	padding: 0 40px 0 20px;
+	height: auto;
+	overflow: visible;
 }
 
 .og-fullimg {
@@ -122,8 +125,10 @@
 
 .og-details p {
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
+	font-size: clamp(14px, 1.4vw, 16px);
+	line-height: 1.55;
+	word-break: keep-all;
+	overflow-wrap: anywhere;
 	color: #4d4d4d;
 }
 
@@ -160,6 +165,21 @@
 	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
 }
 
+@media screen and (max-width: 900px) {
+  .og-fullimg,
+  .og-details {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .og-fullimg img {
+    max-height: 220px;
+    margin-bottom: 16px;
+  }
+}
+
 @media screen and (max-width: 650px) {
 
   .portfolio h2 { font-size: 24px; }
@@ -168,13 +188,6 @@
     margin-inline: auto;
   }
 	.og-fullimg { display: none; }
-  .og-details { float: none; width: 100%; padding: 0; }
   .og-details h3 { font-size: 18px; }
-  .og-details p {
-    font-size: 14px;
-    line-height: 1.55;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-  }
 
 }
