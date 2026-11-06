@@ -9,6 +9,7 @@
 .og-grid li {
 	display: inline-block;
 	margin: 10px 5px 0 5px;
+	max-width: calc(100% - 10px);
 	vertical-align: top;
 }
 
@@ -19,6 +20,10 @@
 	display: block;
   position: relative;
   max-width: 100%;
+}
+
+.og-grid li > a img {
+	height: auto;
 }
 
 .og-grid li.og-expanded > a::after {
@@ -36,7 +41,7 @@
 }
 
 .og-grid:has(.og-expanded) {
-	padding-bottom: 48px;
+	padding-bottom: 88px;
 }
 
 .og-expander {
