@@ -149,12 +149,10 @@
   });
 
   function toggleLogoImg(id) {
-    var img = document.getElementById(id).src;
-    if (img.indexOf('logo-dark.svg') != -1) {
-      document.getElementById(id).src = '/images/logo.svg';
-    } else {
-      document.getElementById(id).src = '/images/logo-dark.svg';
-    }
+    var logo = document.getElementById(id);
+    var light = logo.dataset.logoLight;
+    var dark = logo.dataset.logoDark;
+    logo.src = logo.getAttribute('src') === dark ? light : dark;
   }
 
   // Styling Menu on Scroll

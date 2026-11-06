@@ -9,6 +9,8 @@
             src="{{ .Site.Params.logo_light | relURL }}"
             alt="{{ .Site.Title }}"
             id="desktop-logo"
+            data-logo-light="{{ .Site.Params.logo_light | relURL }}"
+            data-logo-dark="{{ .Site.Params.logo_dark | relURL }}"
         /></a>
       </div>
       <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
