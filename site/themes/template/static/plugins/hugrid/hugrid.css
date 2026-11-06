@@ -22,6 +22,11 @@
   max-width: 100%;
 }
 
+.og-grid li > a {
+	max-width: 80vw;
+	margin-inline: auto;
+}
+
 .og-grid li > a img {
 	height: auto;
 }
