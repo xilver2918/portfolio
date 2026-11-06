@@ -190,7 +190,12 @@
   // Toggle Mobile Menu
   $('.mobile-menu a.menu-link').on('click', function () {
     $('.menu-link').toggleClass('active');
-    $('.menu-slider').slideToggle(500);
+    $('.menu-slider').stop(true, true).slideToggle(500);
+  });
+
+  $('.mobile-menu-list a').on('click', function () {
+    $('.mobile-menu .menu-link').removeClass('active');
+    $('.mobile-menu .menu-slider').stop(true, true).slideUp(500);
   });
   /*--------------------------------
 			 End Menu
