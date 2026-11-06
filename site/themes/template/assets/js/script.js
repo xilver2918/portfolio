@@ -148,43 +148,29 @@
     }
   });
 
-  function toggleLogoImg(id) {
-    var logo = document.getElementById(id);
-    var light = logo.dataset.logoLight;
-    var dark = logo.dataset.logoDark;
-    logo.src = logo.getAttribute('src') === dark ? light : dark;
+  var header = document.getElementById('header');
+  var desktopLogo = document.getElementById('desktop-logo');
+  var $menuContainer = $('.menu-container');
+  var menuIsSolid;
+
+  function updateMenuStyle() {
+    var isSolid = !header || header.getBoundingClientRect().bottom <= $menuContainer.innerHeight() + 25;
+    if (menuIsSolid === isSolid) return;
+
+    if (menuIsSolid && !isSolid) setMobileMenu(false);
+    menuIsSolid = isSolid;
+    $menuContainer.toggleClass('menu-normal', isSolid);
+    $('.menu-item').toggleClass('menu-item-transparent', isSolid);
+    $('.desktop-menu .hvr-underline-from-left').toggleClass('dark', isSolid);
+    $('.mobile-menu').toggleClass('mobile-menu-fix', isSolid);
+    if (desktopLogo) {
+      desktopLogo.src = isSolid ? desktopLogo.dataset.logoDark : desktopLogo.dataset.logoLight;
+    }
   }
 
-  // Styling Menu on Scroll
-  if (window.location.pathname === '/') {
-    $('.about-me').waypoint({
-      handler: function (direction) {
-        // Changing Menu background after leaving Header Section
-        $('.menu-container').toggleClass('menu-normal');
-        $('.menu-item').toggleClass('menu-item-transparent');
-        $('.desktop-menu .hvr-underline-from-left').toggleClass('dark');
-        // Toggle Logo
-        toggleLogoImg('desktop-logo');
-        // Toggling Mobile Menu Visibility
-        $('.mobile-menu').toggleClass('mobile-menu-fix');
-        // Auto-Collapsing Mobile Menu When Left Open
-        if (direction === 'up') {
-          setMobileMenu(false);
-        }
-      },
-      // make header turn white just before it reaches about me section
-      offset: $('.menu-container').innerHeight() + 25
-    });
-  } else {
-    // Changing Menu background after leaving Header Section
-    $('.menu-container').addClass('menu-normal');
-    $('.menu-item').addClass('menu-item-transparent');
-    $('.desktop-menu .hvr-underline-from-left').addClass('dark');
-    // Toggle Logo
-    toggleLogoImg('desktop-logo');
-    // Toggling Mobile Menu Visibility
-    $('.mobile-menu').addClass('mobile-menu-fix');
-  }
+  $(window).on('scroll resize load pageshow', updateMenuStyle);
+  updateMenuStyle();
+
 
   // Toggle Mobile Menu
   function setMobileMenu(isOpen) {
